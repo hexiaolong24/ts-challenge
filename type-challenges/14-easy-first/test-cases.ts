@@ -10,4 +10,4 @@ type cases = [
 
 // type t1 = First<[]>
 // 知识点
-// 如果是一个 【】 空数组的话，那么获取的 【0】 是 undefined
+// 如果是一个 [] 空数组的话，那么获取的 [0] 是 undefined

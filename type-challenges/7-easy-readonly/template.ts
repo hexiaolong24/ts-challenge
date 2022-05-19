@@ -1,6 +1,19 @@
+// 遍历interface [p in keyof T]
 type MyReadonly<T> = {
-  readonly [P in keyof T]: T[P];
+  readonly [p in keyof T] : T[p]
 };
+interface Obj {
+  title: string
+  age: number
+}
+let obj:MyReadonly<Obj> = {
+  title: 'test',
+  age: 12
+}
+// ok
+console.log(obj.title)
+// no
+obj.title = '123'
 
 
 
