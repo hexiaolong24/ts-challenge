@@ -1,4 +1,12 @@
+// never 表示空集
+// 如果是联合类型会依次取出对比，如果是固定类型，会直接比较
 type MyExclude<T, U> = T extends U ? never : T;
+
+// type MyExclude<T, U> = T extends U ? 'a' : 'b';
+
+type A= '1' | '3'
+type B = '1' // 'a' | 'b' 满足和不满足的类型会组成联合类型
+type C = MyExclude<A, B>
 
 interface IResponse {
   index: number;

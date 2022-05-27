@@ -2,7 +2,8 @@ import { Equal, Expect } from "@type-challenges/utils";
 
 const tesla = ["tesla", "model 3", "model X", "model Y"]  as const
 
-
+// 不加 as const 就是string[]
+// const tesla = ["tesla", "model 3", "model X", "model Y"]
 type t55 = typeof tesla
 
 const spaceX = [

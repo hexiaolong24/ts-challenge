@@ -38,7 +38,7 @@ type Tail<T extends any[]> = T extends [infer First, ...infer Rest]
   : never;
 
 
-type t4 = Tail<[]>
+type t4 = Tail<[1,2,3]>
 
 
 // T === []

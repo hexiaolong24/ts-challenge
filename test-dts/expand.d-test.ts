@@ -56,8 +56,8 @@ type De = {
 };
 type Todo = DeepReadonly<De>; // should be same as `Expected`
 
-type DeepReadonly<T> = {
-  readonly [K in keyof T]: T[K] extends object ? DeepReadonly<T[K]> : T[K];
-};
+// type DeepReadonly<T> = {
+//   readonly [K in keyof T]: T[K] extends object ? DeepReadonly<T[K]> : T[K];
+// };
 
 type r4 = ExpandRecursive<Todo>

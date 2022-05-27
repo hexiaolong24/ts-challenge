@@ -1,13 +1,7 @@
 import { Equal } from "@type-challenges/utils";
-
-export type Includes<T extends any[], U> = T extends [
-  infer First,
-  ...infer Rest
-]
-  ? Equal<First, U> extends true
-    ? true
-    : Includes<Rest, U>
-  : false;
+// 依次取出第一个元素 与 U 对比
+export type Includes<T extends any[], U> = T extends [infer First, ...infer Rest] ? 
+  Equal<First, U> extends true ? true : Includes<Rest, U> : false
 
 // js
 // for 循环的实现

@@ -8,4 +8,6 @@ function If(C: any, T: any, F: any) {
 // 知识点
 // 类型兼容性 | 分配规则
 // null 严格模式和非严格模式的区别
+// 严格模式下 null extends true 是false
+// 非严格模式下 null extends true 是true
 // 1. https://www.typescriptlang.org/docs/handbook/type-compatibility.html
