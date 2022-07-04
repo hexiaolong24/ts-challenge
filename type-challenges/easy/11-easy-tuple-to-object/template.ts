@@ -15,6 +15,7 @@ type TupleToObject<T extends readonly (string | number | symbol)[]> = {
 const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 
 // keyof array -> 遍历出来的是索引
+// keyof tuple -> 遍历出来的是具体的字面量类型
 type r = TupleToObject<typeof tuple>;
 // ok 这里的'1' 2 是类型，不是值
 type error = TupleToObject<['1', 2]>;

@@ -1,4 +1,4 @@
-// 注意 ts中 === 就是 extends
+// 注意 ts中 === 用 extends 来表示
 // 第一种
 // T 是否 === []，如果是 返回never
 // type First<T extends any[]> = T extends [] ? never:  T[0]

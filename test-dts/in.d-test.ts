@@ -18,7 +18,7 @@ describe("in", () => {
     };
 
     let man: TypeToNumber<Person> = {
-      name: "123", // 报错 必须是 number 类型
+      age: '1123', // 报错 必须是 number 类型
     };
   });
 });
